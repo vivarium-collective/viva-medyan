@@ -1,15 +1,15 @@
-# pbg-medyan
+# viva-medyan
 
 A [process-bigraph](https://github.com/vivarium-collective/process-bigraph)
 wrapper for the [MEDYAN](https://medyan.org/) cytoskeletal-network simulator.
 
-**[View Interactive Demo Report](https://vivarium-collective.github.io/pbg-medyan/)** —
+**[View Interactive Demo Report](https://vivarium-collective.github.io/viva-medyan/)** —
 real-MEDYAN motor-density sweep, deformable-vesicle filopodia (membrane mesh
 pulled live from MEDYAN's `traj.h5`), and a PBG-composability demo where a
 sibling process drives MEDYAN's G-actin concentration through a square-wave
 pulse. Three.js 3D viewers, Plotly metrics charts, and bigraph-viz
 architecture diagrams. The pure-Python engine's report is at
-[python_demo.html](https://vivarium-collective.github.io/pbg-medyan/python_demo.html).
+[python_demo.html](https://vivarium-collective.github.io/viva-medyan/python_demo.html).
 
 Two complementary Processes ship in this package:
 
@@ -27,13 +27,13 @@ relaxation, membrane–filament coupling); the C++ bridge runs the upstream
 simulator end-to-end and parses both the legacy `snapshot.traj` and the
 HDF5 `traj.h5` outputs.
 
-Public repo: <https://github.com/vivarium-collective/pbg-medyan>
+Public repo: <https://github.com/vivarium-collective/viva-medyan>
 
 ## Installation
 
 ```bash
-git clone https://github.com/vivarium-collective/pbg-medyan.git
-cd pbg-medyan
+git clone https://github.com/vivarium-collective/viva-medyan.git
+cd viva-medyan
 uv venv .venv && source .venv/bin/activate
 uv pip install -e .[dev]
 ```
