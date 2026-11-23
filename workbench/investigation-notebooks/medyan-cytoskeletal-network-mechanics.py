@@ -260,7 +260,7 @@ def _render_one(address, config, runs_db, study_yaml, overrides=None):
 
 # **Composite `pbg_medyan.composites.network-demo`** — `spec_pbg_medyan_composites_network_demo` (static spec file, editable dict)
 
-from viva_superpowers.composite_spec import load_spec
+from discovery_engine.composite_spec import load_spec
 spec_pbg_medyan_composites_network_demo = load_spec(REPO / 'pbg_medyan/composites/network-demo.composite.yaml')
 describe_spec(spec_pbg_medyan_composites_network_demo)
 
@@ -301,7 +301,7 @@ if RERUN:
     from process_bigraph import Composite
     try:
         with quiet():  # keep per-step stdout out of the notebook
-            from viva_superpowers.composite_spec import build_composite_from_spec
+            from discovery_engine.composite_spec import build_composite_from_spec
             _comp = build_composite_from_spec(spec_pbg_medyan_composites_network_demo, {'interval': INTERVAL_baseline}, core=core)
             _comp.run(STEPS_baseline)
         print('ran', 'baseline', f'(pbg_medyan.composites.network-demo) for', STEPS_baseline, 'steps')
@@ -361,7 +361,7 @@ _save_viz('network-demo', 'network-demo-decision', _render_one('', {}, RUNS_DB, 
 
 # **Composite `pbg_medyan.composites.network-demo-with-viz`** — `spec_pbg_medyan_composites_network_demo_with_viz` (static spec file, editable dict)
 
-from viva_superpowers.composite_spec import load_spec
+from discovery_engine.composite_spec import load_spec
 spec_pbg_medyan_composites_network_demo_with_viz = load_spec(REPO / 'pbg_medyan/composites/network-demo-with-viz.composite.yaml')
 describe_spec(spec_pbg_medyan_composites_network_demo_with_viz)
 
@@ -402,7 +402,7 @@ if RERUN:
     from process_bigraph import Composite
     try:
         with quiet():  # keep per-step stdout out of the notebook
-            from viva_superpowers.composite_spec import build_composite_from_spec
+            from discovery_engine.composite_spec import build_composite_from_spec
             _comp = build_composite_from_spec(spec_pbg_medyan_composites_network_demo_with_viz, {'interval': INTERVAL_baseline}, core=core)
             _comp.run(STEPS_baseline)
         print('ran', 'baseline', f'(pbg_medyan.composites.network-demo-with-viz) for', STEPS_baseline, 'steps')

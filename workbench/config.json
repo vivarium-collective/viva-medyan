@@ -1,7 +1,6 @@
 {
   "mode": "snapshot",
-  "smsApiBase": "",
   "repo": "https://github.com/vivarium-collective/viva-medyan",
-  "commit": "010bc4ffb66596d251097f591215afc4ca003451",
+  "commit": "c5378e83d7ec3fcbee2680a1402c9a8b2afc7cc7",
   "generated_from_ref": "main"
 }
