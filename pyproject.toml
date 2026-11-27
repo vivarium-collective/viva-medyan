@@ -33,5 +33,10 @@ viva-superpowers = { git = "https://github.com/vivarium-collective/viva-superpow
 [tool.setuptools.packages.find]
 include = ["pbg_medyan*"]
 
+[tool.setuptools.package-data]
+# Ship declarative composite specs so a pinned/wheel install resolves
+# `pbg_medyan.composites.<stem>` (build_composite + dashboard resolver read these).
+"pbg_medyan.composites" = ["*.composite.yaml"]
+
 [project.scripts]
 viva-medyan = "pbg_medyan.cli.__main__:main"
